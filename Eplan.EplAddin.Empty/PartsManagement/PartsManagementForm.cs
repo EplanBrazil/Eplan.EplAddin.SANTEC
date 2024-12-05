@@ -59,6 +59,7 @@ namespace Eplan.EplAddin.Santec
             if (group_01_03 != null)
             {
                 LoadComboBoxItens(group_01_03, "option", digits1to3ComboBox);
+                AdjustComboBoxDropDownWidth(digits1to3ComboBox);
             }
 
         }
@@ -100,6 +101,7 @@ namespace Eplan.EplAddin.Santec
                 if (group_cod_04_07_requirement != null)
                 {
                     LoadComboBoxItens(group_cod_04_07_requirement, "option", digits4to7ComboBox);
+                    AdjustComboBoxDropDownWidth(digits4to7ComboBox);
                     digits4to7ComboBox.Enabled = true;
                 }
                 else
@@ -159,9 +161,10 @@ namespace Eplan.EplAddin.Santec
                     if (group_cod_08_09_requirement_04_07 != null)
                     {
                         LoadComboBoxItens(group_cod_08_09_requirement_04_07, "option", digits8to9ComboBox);
+                        AdjustComboBoxDropDownWidth(digits8to9ComboBox);
+                        digits8to9ComboBox.Enabled = true; 
                     }
                 }
-                digits8to9ComboBox.Enabled = true;
             }
             else
             {
@@ -276,6 +279,7 @@ namespace Eplan.EplAddin.Santec
                     components.Panel.AutoSize = true;
                     components.Label.Dock = DockStyle.Left;
                     components.Label.Text = "Código 10 a 13";
+                    components.InputControl.UseTallSize = false;
                     components.InputControl.Width = 250;
 
                     components.InputControl.Name = $"digits10to13comboBox";
@@ -283,7 +287,7 @@ namespace Eplan.EplAddin.Santec
                 createdRow.InputControl.SelectedIndexChanged += Value_10to13_Changed;
 
                 LoadComboBoxItens(group, "option", createdRow.InputControl);
-
+                AdjustComboBoxDropDownWidth(createdRow.InputControl);
             }
         }
 
@@ -512,12 +516,27 @@ namespace Eplan.EplAddin.Santec
 
         private void CancelButton_Click(object sender, EventArgs e) => Close();
 
-        private void OkButton_Click(object sender, EventArgs e) 
+        private void OkButton_Click(object sender, EventArgs e)
         {
             if (itemCodeTextBox.Text.Length < 13)
             {
-                MessageBox.Show("Informe todos os valores!", "Gerenciamento de itens", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, Informe todos os campos!", "Gerenciamento de itens", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private static void AdjustComboBoxDropDownWidth(ComboBox comboBox) 
+        {
+            int maxWidth = comboBox.Width; 
+            using (Graphics graphics = comboBox.CreateGraphics()) 
+            { 
+                foreach (var item in comboBox.Items) 
+                { 
+                    int itemWidth = (int)(graphics.MeasureString(item.ToString(), comboBox.Font).Width * 1.1f); 
+                    if (itemWidth > maxWidth) maxWidth = itemWidth; 
+                } 
+            }    
+            /* 35 de margem se necessário, mas talvez seja diferente de máquina para máquina (DPI)... */        
+            comboBox.DropDownWidth = maxWidth + (maxWidth != comboBox.Width ? 35 : 0) + SystemInformation.VerticalScrollBarWidth; 
         }
 
     }

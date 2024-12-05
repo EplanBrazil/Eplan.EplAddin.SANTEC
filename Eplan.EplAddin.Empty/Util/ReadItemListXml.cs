@@ -12,7 +12,7 @@ namespace Eplan.EplAddin.Empty.Util
 
         public static IEnumerable<XElement> GetXmlGroups()
         {
-            string xmlFilePath = "C:\\Users\\gustavo.oliveira\\source\\repos\\Digitos\\Eplan.EplAddin.Empty\\newItemList.xml";
+            string xmlFilePath = "C:\\Users\\gustavo.oliveira\\source\\repos\\Digitos\\Eplan.EplAddin.Empty\\itemList.xml";
 
             XDocument doc = XDocument.Load(xmlFilePath);
             return doc.Descendants("group");
