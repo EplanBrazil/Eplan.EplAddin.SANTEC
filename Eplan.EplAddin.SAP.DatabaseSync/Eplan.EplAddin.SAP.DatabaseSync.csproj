@@ -8,8 +8,8 @@
     <ProjectGuid>{22D4508D-4BC4-43A5-8BC1-584AE84DC470}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Eplan.EplAddin.Empty</RootNamespace>
-    <AssemblyName>Eplan.EplAddin.Empty</AssemblyName>
+    <RootNamespace>Eplan.EplAddin.SAP.DatabaseSync</RootNamespace>
+    <AssemblyName>Eplan.EplAddin.SAP.DatabaseSync</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

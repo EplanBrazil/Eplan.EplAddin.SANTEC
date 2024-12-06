@@ -99,11 +99,11 @@
             this.cancelButton,
             this.toolStripSeparator1,
             this.okButton});
-            this.bottomToolStrip.Location = new System.Drawing.Point(3, 285);
+            this.bottomToolStrip.Location = new System.Drawing.Point(3, 281);
             this.bottomToolStrip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bottomToolStrip.Name = "bottomToolStrip";
             this.bottomToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bottomToolStrip.Size = new System.Drawing.Size(546, 27);
+            this.bottomToolStrip.Size = new System.Drawing.Size(546, 31);
             this.bottomToolStrip.TabIndex = 2;
             this.bottomToolStrip.Text = "toolStrip1";
             // 
@@ -113,7 +113,7 @@
             this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
             this.cancelButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(70, 24);
+            this.cancelButton.Size = new System.Drawing.Size(70, 28);
             this.cancelButton.Text = "Cancelar";
             // 
             // toolStripSeparator1
@@ -142,7 +142,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(546, 277);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(546, 273);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // topFlowLayoutPanel
@@ -156,7 +156,7 @@
             this.topFlowLayoutPanel.Location = new System.Drawing.Point(3, 2);
             this.topFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topFlowLayoutPanel.Name = "topFlowLayoutPanel";
-            this.topFlowLayoutPanel.Size = new System.Drawing.Size(267, 273);
+            this.topFlowLayoutPanel.Size = new System.Drawing.Size(267, 269);
             this.topFlowLayoutPanel.TabIndex = 1;
             // 
             // digits1to3FlowLayoutPanel
@@ -324,7 +324,7 @@
             this.centerFlowLayoutPanel.Location = new System.Drawing.Point(276, 2);
             this.centerFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.centerFlowLayoutPanel.Name = "centerFlowLayoutPanel";
-            this.centerFlowLayoutPanel.Size = new System.Drawing.Size(267, 273);
+            this.centerFlowLayoutPanel.Size = new System.Drawing.Size(267, 269);
             this.centerFlowLayoutPanel.TabIndex = 5;
             // 
             // itemDescriptionFlowLayoutPanel
